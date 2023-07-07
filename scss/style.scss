@@ -1,0 +1,518 @@
+
+body {
+  font-family: 'Marcellus', serif;
+}
+
+// -----------------------------nav
+
+nav {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  width: 100%;
+  background-color: #000000;
+  transition: all 300ms ease-in-out;
+
+  .logo {
+    display: flex;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 65%;
+
+    li {
+      list-style: none;
+
+      a {
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 3px;
+        text-decoration: none;
+        color: #ffffff;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #0d6efd;
+        }
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+    margin-right: 20px;
+
+    div {
+      margin: 5px;
+      width: 28px;
+      height: 4px;
+      background-color: #ffffff;
+      transition: all 300ms ease-in;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav-links {
+    width: 78%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    width: 60%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    transform: translateX(100%);
+    transition: all 400ms ease-in-out;
+  }
+
+  nav .burger {
+    z-index: 1;
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-activ {
+    transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 8px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -8px);
+}
+
+// -----------------------------section-1
+
+.section-1 {
+  .mySwiper {
+    .block {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+      background-position: center;
+      background-size: cover;
+      transition: filter 0.4s;
+
+      &:nth-child(1) {
+        background-image: url('https://www.mazda.md/Portals/3/adam/Contents/8dcfmBwiKka2nwYfWAX92A/ImageMobile/2022_cx_5_range.jpg');
+      }
+
+      &:nth-child(2) {
+        background-image: url('https://www.mazda.md/Portals/3/adam/Contents/3slh6Og1EkSGX2FAK9QVPw/ImageMobile/2022_mazda_mx-30_global_still-04%20(1).jpg');
+      }
+
+      &:nth-child(3) {
+        background-image: url('https://www.mazda.md/Portals/3/adam/Contents/cHdue2SIHUWp-clJuSXiEg/Image/2022_mazda3_spain_still_44.jpg');
+      }
+
+      .title {
+        display: flex;
+        align-self: center;
+        margin-top: 120px;
+        font-size: calc(1.2875rem + 0.45vw);
+        line-height: 1.29;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+
+      .text {
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: #ffffff;
+      }
+
+      .button {
+        border-radius: 5px;
+        padding: 10px 60px;
+        text-decoration: none;
+        color: #000000;
+        background-color: #ffffff;
+        transition: 0.4s;
+
+        &:hover {
+          color: #ffffff;
+          background-color: #0d6efd;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------section-2
+
+.section-2 {
+  padding: 60px 0;
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}
+
+// -----------------------------section-3
+
+.section-3 {
+  .blocks {
+    display: flex;
+    flex-direction: column;
+
+    .block {
+      display: block;
+
+      .block-img {
+        display: block;
+        overflow: hidden;
+        height: 415px;
+
+        .images {
+          display: block;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 10px;
+          width: 100%;
+          height: 415px;
+          object-fit: cover;
+          transition: transform 0.6s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      .images {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 415px;
+        object-fit: cover;
+        transition: transform 0.6s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 0;
+        text-align: center;
+
+        .title {
+          font-size: 1.8rem;
+        }
+
+        .text {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------section-4
+
+.section-4 {
+  .block {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    text-align: center;
+    background-image: url('https://www.mazda.md/Portals/3/adam/Contents/uLfJwbGapkm91asAx_4o6w/Image/2023_mazda6_global_takumi_sdn_pq_still_3_until_dec_2026.jpg');
+    background-position: center;
+    background-size: cover;
+
+    .title {
+      margin-top: 50px;
+      font-size: calc(1.2875rem + 0.45vw);
+      line-height: 1.3;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .text {
+      margin-top: 15px;
+      font-weight: 500;
+      font-size: calc(1.40625rem + 1.875vw);
+      line-height: 1.5;
+      letter-spacing: 7px;
+      color: #ffffff;
+    }
+
+    .button {
+      border-radius: 5px;
+      padding: 10px 60px;
+      text-decoration: none;
+      color: #000000;
+      background-color: #ffffff;
+      transition: 0.4s;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #0d6efd;
+      }
+    }
+  }
+}
+
+// -----------------------------section-5
+
+.section-5 {
+  .block {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    text-align: center;
+    background-image: url('https://hr.cdn.mazda.media/9a8a3c73003447bb882ff05e0df344d6/c7982da39be24a0fb7517fe053ed40f8.jpg?4a0c17');
+    background-position: center;
+    background-size: cover;
+
+    .title {
+      margin-top: 50px;
+      font-size: calc(1.2875rem + 0.45vw);
+      line-height: 1.3;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .text {
+      margin-top: 15px;
+      font-weight: 500;
+      font-size: calc(1.40625rem + 1.875vw);
+      line-height: 1.5;
+      letter-spacing: 7px;
+      color: #ffffff;
+    }
+
+    .button {
+      border-radius: 5px;
+      padding: 10px 60px;
+      text-decoration: none;
+      color: #000000;
+      background-color: #ffffff;
+      transition: 0.4s;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #0d6efd;
+      }
+    }
+  }
+}
+
+// -----------------------------section-6
+
+.section-6 {
+  padding: 60px 0;
+
+  .text {
+    font-size: 1rem;
+  }
+}
+
+// -----------------------------footer
+
+$color_1: rgb(255, 255, 255, 1);
+$color_2: rgb(255, 255, 255, 0.8);
+$color_4: rgb(255, 255, 255);
+$color_5: rgb(255, 255, 255, 0.7);
+$background-color_1: rgb(0, 0, 0);
+$background-color_2: #0d6efd;
+$background-color_3: rgb(10, 10, 10);
+
+.footer {
+  padding: 70px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1em;
+  background-color: $background-color_1;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .cont {
+    margin: auto;
+    max-width: 1170px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: $color_1;
+
+    >div {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      padding: 0 50px;
+      width: 20%;
+      gap: 15px;
+
+      &:nth-child(1) {
+        width: 35%;
+      }
+    }
+
+    p {
+      margin: 20px 0;
+      font-size: 0.9em;
+      line-height: 1.8em;
+      color: $color_2;
+    }
+
+    h4 {
+      border-radius: 7px;
+      padding: 5px 10px;
+      width: fit-content;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: $background-color_2;
+    }
+
+    ul {
+      list-style-type: none;
+      overflow: hidden;
+      margin: 15px 0;
+      padding-left: 0;
+      transition: 0.3s;
+
+      a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: $color_2;
+      }
+    }
+
+    li {
+      list-style-type: none;
+      overflow: hidden;
+      margin: 15px 0;
+      padding-left: 0;
+      transform: translateX(-15px);
+      transition: 0.3s;
+
+      &:hover {
+        transform: translateX(0);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 8px solid #0d6efd;
+        width: 0;
+        height: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    .socialButton {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      width: fit-content;
+      cursor: pointer;
+      gap: 25px;
+
+      i {
+        font-size: 1.9em;
+        text-decoration: none;
+        color: $color_4;
+        opacity: 0.5;
+        transform: translateY(0);
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 1;
+          transform: translateY(-4px);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    height: 80px;
+    font-size: 0.8em;
+    color: $color_5;
+    background-color: $background-color_3;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .footer {
+    .row {
+      div {
+        margin-bottom: 30px;
+        width: 50% !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  .footer {
+    .row {
+      div {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+// -------------------------------------------------media
+
+@media (min-width: 992px) {
+  nav {
+    justify-content: space-around;
+  }
+
+  .section-3 {
+    .blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

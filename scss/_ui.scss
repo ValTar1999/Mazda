@@ -1,0 +1,309 @@
+/* SETTINGS */
+:root,
+*::before,
+*::after {
+  --color-white: #FFFFFF;
+  --color-dark-blue: #090C38;
+  --color-orange: #FAAE31;
+  --color-green: #1DBDB6;
+  --color-blue: #1EA8DA;
+  --color-red: #D63057;
+  --color-purpure: #7837F3;
+  --color-purpure-2: #5b29b7;
+  --color-gray-01: #F7F6F9;
+  --color-gray-01-hover: #F3F2F5;
+  --color-gray-02: #D5DBEA;
+  --color-gray-03: #9DA1B5;
+  --color-gray-04: #767F95;
+  --color-gray-05: #53607E;
+  --color-smart-hub: #4A6CD3;
+  --color-smart-hub-light: #DDE5FF;
+  --color-smart-disburse: #2B61DF;
+  --color-smart-disburse-light: #DDE5FA;
+  --color-smart-collect: #0FA9CD;
+  --color-smart-collect-light: #BFF3FF;
+  --color-smart-exchange: #F39911;
+  --color-smart-exchange-light: #FDE9AE;
+}
+
+/* CUSTOM RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  margin: 20px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+/* CUSTOM OFFSETS */
+.my-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* COLOURS */
+.color-white {
+  color: #FFFFFF;
+}
+
+.color-purpure {
+  color: #7837F3;
+}
+
+.color-black {
+  color: #000000;
+}
+
+.color-dark-blue {
+  color: #090C38;
+}
+
+.color-orange {
+  color: #FAAE31;
+}
+
+.color-green {
+  color: #1DBDB6;
+}
+
+.color-blue {
+  color: #1EA8DA;
+}
+
+.color-red {
+  color: #D63057;
+}
+
+.color-gray-01 {
+  color: #F7F6F9;
+}
+
+.color-gray-02 {
+  color: #D5DBEA;
+}
+
+.color-gray-03 {
+  color: #9DA1B5;
+}
+
+.color-gray-04 {
+  color: #767F95;
+}
+
+.color-gray-05 {
+  color: #53607E;
+}
+
+.bg-gradient-green-blue {
+  background: linear-gradient(-165deg, #2162F9, #1DC6B2);
+  background: -webkit-linear-gradient(-165deg, #2162F9, #1DC6B2);
+}
+
+.bg-gradient-blue-purple {
+  background: linear-gradient(-20deg, #6FF3F3 3%, #8685F7 60%);
+  background: -webkit-linear-gradient(-20deg, #6FF3F3 3%, #8685F7 60%);
+}
+
+
+/* TYPOGRAPHY */
+.font-weight-medium {
+  font-weight: 500 !important;
+}
+
+.font-title-xl {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.font-title-l {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.font-title-m {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.font-title-s {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.font-body-l {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-body-s {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.font-body-xs {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.025em;
+}
+
+.font-misc-overline {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.font-misc-meta {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@media (min-width: 576px) {
+  .font-title-xl {
+    font-size: 44px;
+    line-height: 54px;
+  }
+}
+
+/* FEINTS */
+.text-gradient-strong {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-gradient-strong strong {
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+/* COMPONENTS */
+/* UI-BUTTON */
+.ui-form input[type='submit'],
+.ui-button {
+  --ui-button-style-color: var(--color-orange);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--ui-button-border, rgba(0, 0, 0, 0));
+  border-radius: 99px;
+  padding: 16px 24px;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--ui-button-color, var(--color-white));
+  background-color: var(--ui-button-style-color);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  cursor: pointer;
+}
+
+.ui-form input[type='submit'],
+.ui-button:hover {
+  color: var(--color-white);
+  background-color: var(--color-dark-blue);
+}
+
+.ui-button:hover .ui-button__icon {
+  transform: translateX(2px);
+}
+
+.ui-button.is-size-small {
+  padding: 10px 14px;
+}
+
+.ui-button.is-style-blue {
+  --ui-button-style-color: var(--color-blue);
+}
+
+.ui-button.is-on-dark:hover {
+  --ui-button-border: var(--ui-button-style-color);
+
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.ui-button.is-on-dark.is-variant-outline {
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.ui-button.is-on-dark.is-variant-link {
+  border: none;
+  color: var(--color-white);
+}
+
+.ui-button.is-variant-outline {
+  --ui-button-border: var(--ui-button-style-color);
+
+  color: var(--color-dark-blue);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.ui-button.is-variant-outline:hover {
+  color: var(--color-white);
+  background-color: var(--ui-button-style-color);
+}
+
+.ui-button.is-variant-link {
+  border: none;
+  padding: 0;
+  color: var(--color-dark-blue);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.ui-button.is-variant-link:hover {
+  color: var(--ui-button-style-color);
+}
+
+.ui-button .ui-button__icon {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s;
+}
+
+/* END UI-BUTTON */
+
+/* LINKS */
+.ui-link-child a,
+.ui-link {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-blue);
+  transition: color 0.2s;
+}
+
+.ui-link-child a:hover,
+.ui-link:hover {
+  color: var(--color--dark-blue);
+}
+
+/* END LINKS */
